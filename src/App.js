@@ -1,12 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import Toggle from './Toggle';
+import Toggle from './ToggleRenderPropsChildren';
 
 function App() {
   return (
     <div className="App">
+      <h1>HI</h1>
       <Toggle>
-        <h1>Hello</h1>
+        {({ on, toggle }) => (
+          <div>
+            { on &&
+              <h1>Show Me</h1>
+            }
+            <button onClick={toggle}>Show/Hide</button>
+          </div>
+        )}
       </Toggle>
     </div>
   );
