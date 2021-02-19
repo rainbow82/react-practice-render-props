@@ -1,3 +1,4 @@
+import React, { Fragment } from 'react'
 import './App.css';
 import Toggle from './ToggleRenderPropsChildren';
 
@@ -7,12 +8,12 @@ function App() {
       <h1>HI</h1>
       <Toggle>
         {({ on, toggle }) => (
-          <div>
+          <Fragment>
             { on &&
               <h1>Show Me</h1>
             }
             <button onClick={toggle}>Show/Hide</button>
-          </div>
+          </Fragment>
         )}
       </Toggle>
     </div>
