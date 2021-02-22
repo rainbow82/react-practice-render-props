@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import './App.css';
 import Toggle from './ToggleRenderPropsChildren';
+import Portal from './Portal';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </Fragment>
         )}
       </Toggle>
+      <Portal><h1> inside the portal </h1></Portal>
     </div>
   );
 }
