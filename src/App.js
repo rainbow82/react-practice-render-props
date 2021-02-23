@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import './App.css';
 import Toggle from './ToggleRenderPropsChildren';
 import Portal from './Portal';
+import Modal from './Modal';
 
 function App() {
   return (
@@ -10,14 +11,13 @@ function App() {
       <Toggle>
         {({ on, toggle }) => (
           <Fragment>
-            { on &&
-              <h1>Show Me</h1>
-            }
-            <button onClick={toggle}>Show/Hide</button>
+            <button onClick={toggle}>Login</button>
+            <Modal on={on} toggle={ toggle }>
+              <h1>Still in modal</h1>
+            </Modal>
           </Fragment>
         )}
       </Toggle>
-      <Portal><h1> inside the portal </h1></Portal>
     </div>
   );
 }
