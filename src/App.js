@@ -1,13 +1,11 @@
 import React, { Fragment } from 'react'
 import './App.css';
 import Toggle from './ToggleRenderPropsChildren';
-import Portal from './Portal';
 import Modal from './Modal';
 
 function App() {
   return (
     <div className="App">
-      <h1>HI</h1>
       <Toggle>
         {({ on, toggle }) => (
           <Fragment>
